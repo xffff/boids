@@ -1,5 +1,4 @@
 # modified from BoidRoids in the max examples by Cycling '74
-
 import random
 
 class Swarm:
@@ -11,7 +10,7 @@ class Swarm:
     centroid_y    = 0
     agentcount    = 0
     friction      = 0.5
-    gravity       = 0
+    gravity       = 0.2
     gravpoint_x   = 0
     gravpoint_y   = 0
     mode          = "normal"
