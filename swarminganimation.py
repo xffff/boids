@@ -9,7 +9,7 @@ import SwarmAgent as swarm
 
 fig = plt.figure()
 ax = axes3d.Axes3D(fig)
-sw = swarm.Swarm(25)
+sw = swarm.Swarm(100)
 xs = None
 ys = None
 zs = None
@@ -25,7 +25,8 @@ def genboids():
 genboids()
 X, Y = np.meshgrid(xs, ys)
 Z = zs
-wframe = ax.plot_surface(X,Y,Z)
+sfc = ax.plot_surface(X,Y,Z)
+sca = ax.scatter(xs,ys,zs)
 
 def update(i, ax, fig):
     global xs,ys,zs
@@ -33,11 +34,12 @@ def update(i, ax, fig):
     genboids()
     X, Y = np.meshgrid(xs, ys)
     Z = zs
-    wframe = ax.plot_surface(X,Y,Z,cmap=cm.jet,linewidth=0,alpha=0.6)
+    sfc = ax.plot_surface(X,Y,Z,cmap=cm.jet,linewidth=0,alpha=0.6)
+    sca = ax.scatter(xs,ys,zs,s=np.multiply(zs,100),cmap=cm.jet)
     ax.set_xlim(-2,2)
     ax.set_ylim(-2,2)
     ax.set_zlim(-1,1)
-    return wframe,
+    return sca,
 
 ani = animation.FuncAnimation(fig, update, 
                               frames=xrange(10), 
