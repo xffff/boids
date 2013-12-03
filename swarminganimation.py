@@ -16,7 +16,7 @@ co = None
 
 def genboids():
     global co,xs,ys,zs
-    co = sw.getBoids()
+    co = sw.getBoids() # xs,ys,vxs,vys
     xs = [i for i in co[0]]
     ys = [i for i in co[1]]
     zs = np.add(co[2], co[3])
