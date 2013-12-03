@@ -9,7 +9,7 @@ import SwarmAgent as swarm
 
 fig = plt.figure()
 ax = axes3d.Axes3D(fig)
-sw = swarm.Swarm(5)
+sw = swarm.Swarm(25)
 xs = None
 ys = None
 zs = None

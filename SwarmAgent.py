@@ -10,7 +10,7 @@ class Swarm:
     centroid_y    = 0
     agentcount    = 0
     friction      = 0.5
-    gravity       = 0.2
+    gravity       = 0.1
     gravpoint_x   = 0
     gravpoint_y   = 0
     mode          = "normal"
@@ -135,9 +135,9 @@ class Agent:
     separation    = 0.2
     alignment     = 0.05
     coherence     = 0.02
-    inertia       = 0.3
+    inertia       = 0.4
     maxvel        = 0.3
-    septhresh     = 0.25
+    septhresh     = 0.2
     
     def __init__(self, x, y, vx, vy):
         self.x  = x
