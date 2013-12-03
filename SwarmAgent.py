@@ -135,8 +135,8 @@ class Agent:
     separation    = 0.2
     alignment     = 0.05
     coherence     = 0.02
-    inertia       = 0.5
-    maxvel        = 0.05
+    inertia       = 0.2
+    maxvel        = 0.25
     septhresh     = 0.1
     
     def __init__(self, x, y, vx, vy):
