@@ -30,8 +30,8 @@ def update(i, ax, fig):
     ax.cla()
     genboids()
     wframe = ax.plot_wireframe(xs, ys, zs, rstride=1, cstride=1)
-    ax.set_xlim(-1,1)
-    ax.set_ylim(-1,1)
+    ax.set_xlim(-2,2)
+    ax.set_ylim(-2,2)
     ax.set_zlim(0,2)
     return wframe,
 
