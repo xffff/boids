@@ -81,6 +81,15 @@ class Swarm:
         self.agents[a].x = self.agents[a].x + (self.agents[a].vx*(1-self.friction))
         self.agents[a].y = self.agents[a].y + (self.agents[a].vy*(1-self.friction))
 
+        #torus space wrap
+        self.twrap(a)
+
+    def twrap(self, a):
+        if self.agents[a].x < 0   : self.agents[a].x += 1
+        elif self.agents[a].x > 1 : self.agents[a].x -= 1
+        if self.agents[a].y < 0   : self.agents[a].y += 1
+        elif self.agents[a].y > 1 : self.agents[a].y -= 1
+        
     def separate(self, a):
         for i in xrange(self.numboids):
             if(a != i):
